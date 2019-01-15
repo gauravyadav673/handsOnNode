@@ -1,0 +1,21 @@
+mongoose.Promise=global.Promise;
+mongoose.connect('mongodb://namit:namit7724@ds257564.mlab.com:57564/tshop');
+var user=mongoose.model('User', {
+  username:{
+    type:String,
+    unique:true
+  },
+  name:{
+    type:String
+  },
+  email:{
+    type:String,
+    unique:true
+  },
+  phoneNo:{
+    type:Number
+  },
+  address:{
+    type:String
+  }
+});

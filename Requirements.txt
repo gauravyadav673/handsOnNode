@@ -1,0 +1,25 @@
+Products "
+	Name,Stock Avail,Expiry,MRP,Discount,Seller,Description,Pictures,Reviews,Ratings
+
+User
+	Name,Phone no,email,address
+Customer,seller,admin
+	Customer:
+		Update Profile,View Product,Buy Products,State(Active,Blocked,Banned)
+	Seller:
+		Add products,remove products,Update info,Add Offer,State(Active,Blocked,Banned)
+	Admin:	
+		Can approve seller,Reject seller,Track any order,change any product offer,Discount,add coupon,Analytics,Manage Pages Header,Manage static Pages,Menu 			Change,Address Complaints,View Change Status of Orders,State(Active,Blocked,Banned)
+
+Order:
+	Order belongs to a user,Order me items hongi,order id,order date time,shipment status,Delivery Address Hoga,Payment Mode hoga,Belongs to a seller,Rate Hoga,Discount Hoga,Voucher Hoga,Order ki id hogi
+
+Authentication:	
+	Login,Change Password,iSloggedIn,Register,Login Via Oauth,
+
+Payment :
+	Payment Modes Honge,
+
+
+Complaints Portal,Seller Portal,User Portal
+	
