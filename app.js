@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 //Request Handlers
 app.get('/',routes);
+app.get('/signup',routes);
 
 //Listener
-app.listen(settings.port , () => console.log('App listening on port ' + settings.port));
+app.listen(settings.port,()=> console.log('App listening on port ' + settings.port));

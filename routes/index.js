@@ -7,4 +7,7 @@ app.get('/',(req,res)=>{
   res.json({name:"namit"});
 });
 
+app.get('/signup',(req,res)=>{
+  res.render("./Authentication/signup.hbs");
+})
 module.exports=app;
