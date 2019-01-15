@@ -44,11 +44,15 @@ const UserDetails = mongoose.model('userInfo', UserDetail);
 var createUser=function(user){
     var User=new UserDetails(user);
     User.save().then((user)=>{
-      console.log(user+" Registered Successfully");
-      return (user+" Registered Successfully");
-    },(e)=>{
-      console.log(e);
-      return e;
+      return "success";
+    },(error)=>{
+      if (error.code===11000) {
+        var field = error.message.split(".$")[1];
+        field = field.split(" dup key")[0];
+        field = field.substring(0, field.lastIndexOf("_"));
+        return "An account with this "+field+" already exists.";
+      }
+      return "An error has occurred.";
     });
 }
 

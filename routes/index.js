@@ -19,7 +19,12 @@ app.get('/signup',(req,res)=>{
 app.post('/signup',(req,res)=>{
   var response=auth.createUser(req.body);
   console.log(response);
-  res.end(response);
+  res.render("./index.hbs",{message:response});
+  // if(response=="success"){
+  //   res.render("../index.hbs",{message:response});
+  // }else{
+  //   res.render("../index.hbs",{message:response});
+  // }
 });
 
 
