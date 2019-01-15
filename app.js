@@ -7,7 +7,8 @@ const passport = require('passport');
 var mongoose = require('mongoose');
 
 //Self Made Requires
-routes = require('./routes');
+const routes = require('./routes');
+const authentication = require('./Auth');
 const settings = require('./settings.js');
 
 //settings app.js
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 //Request Handlers
 app.get('/',routes);
 app.get('/signup',routes);
+app.post('/signup',routes);
 
 //Listener
 app.listen(settings.port,()=> console.log('App listening on port ' + settings.port));
