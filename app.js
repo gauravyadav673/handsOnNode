@@ -24,9 +24,7 @@ app.use(session({
     resave: true
 }));
 
-//passport
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 
 //Request Handlers
